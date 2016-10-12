@@ -1,13 +1,11 @@
 #Handlers for postfix role
 ---
-  - name: Postfix service restart
+  - name: restart postfix
     service: 
       name=postfix
       state=restarted
-      enabled=true
 
-  - name: Saslauthd service restart
+  - name: restart saslauthd
     service:
       name=saslauthd
       state=restarted
-      enabled=true
