@@ -1,14 +1,10 @@
 ---
 
 #- name: Install packages for authentication
-#  yum: name={{ item }} state=present
-#  with_items:
-#    - cyrus-sasl-plain-2.1.23-15.el6_6.2.x86_64
-#    - cyrus-sasl-2.1.23-15.el6_6.2.x86_64
-#    - cyrus-sasl-lib-2.1.23-15.el6_6.2.x86_64
+#  yum: name=cyrus-sasl-plain-2.1.23-15.el6_6.2.x86_64 state=present
 
-- name: Create user for authentication
-  shell: saslpasswd2 -c -u {{ postfix_user }} {{ postfix_passwd }}
+#- name: Create user for authentication
+#  shell: saslpasswd2 -c -u {{ postfix_domain }} {{ postfix_user }}
 
 - name: Create relay account
   shell: echo "{{ postfix_relayhost }}:25    {{ postfix_user }}:{{ postfix_passwd }}" >> /etc/postfix/sasl_passwd
