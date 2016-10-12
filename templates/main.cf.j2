@@ -110,13 +110,13 @@ mail_owner = postfix
 #
 # Note: you need to stop/start Postfix when this parameter changes.
 #
-inet_interfaces = "{{ postfix_inet_interfaces }}"
+inet_interfaces = {{ postfix_inet_interfaces }}
 #inet_interfaces = $myhostname
 #inet_interfaces = $myhostname, localhost
 #inet_interfaces = localhost
 
 # Enable IPv4, and IPv6 if supported
-inet_protocols = "{{ postfix_inet_protocols }}"
+inet_protocols = {{ postfix_inet_protocols }}
 
 # The proxy_interfaces parameter specifies the network interface
 # addresses that this mail system receives mail on by way of a
@@ -247,7 +247,7 @@ unknown_local_recipient_reject_code = 550
 # only the local machine.
 # 
 #mynetworks_style = class
-mynetworks_style = "{{ postfix_mynetworks_style }}"
+mynetworks_style = {{ postfix_mynetworks_style }}
 #mynetworks_style = host
 
 # Alternatively, you can specify the mynetworks list by hand, in
@@ -261,7 +261,7 @@ mynetworks_style = "{{ postfix_mynetworks_style }}"
 # of listing the patterns here. Specify type:table for table-based lookups
 # (the value on the table right-hand side is not used).
 #
-mynetworks = "{{ postfix_mynetworks }}"
+mynetworks = {{ postfix_mynetworks }}
 #mynetworks = $config_directory/mynetworks
 #mynetworks = hash:/etc/postfix/network_table
 
@@ -314,7 +314,7 @@ mynetworks = "{{ postfix_mynetworks }}"
 #relayhost = [gateway.my.domain]
 #relayhost = [mailserver.isp.tld]
 #relayhost = uucphost
-relayhost = "{{ postfix_relayhost }}":587
+relayhost = {{ postfix_relayhost }}:587
 
 # REJECTING UNKNOWN RELAY USERS
 #
