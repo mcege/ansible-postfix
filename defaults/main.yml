@@ -1,0 +1,10 @@
+# Default params for postfix role
+---
+
+postfix_relayhost: 195.175.238.2
+postfix_mynetworks: 172.25.6.0/24, 127.0.0.0/8
+postfix_mynetworks_style: subnet
+postfix_inet_interfaces: all
+postfix_inet_protocols: all
+postfix_user: skapalarm@turktelekom.com.tr
+postfix_passwd: skap2015!!

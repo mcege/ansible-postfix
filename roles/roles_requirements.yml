@@ -1,0 +1,2 @@
+- src: git+https://github.com/mcege/ansible-postfix.git
+  name: ansible-postfix

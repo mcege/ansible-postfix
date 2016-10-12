@@ -1,0 +1,16 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: mcege
+  description: Role to install Postfix
+  company: sekomy
+  min_ansible_version: 1.8
+  platforms:
+    - name: Debian
+      versions:
+      - all
+  galaxy_tags:
+  - development
+  - mail
+  - postfix

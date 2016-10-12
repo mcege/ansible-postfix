@@ -1,0 +1,8 @@
+# Main tasks file for postfix role
+---
+
+# Install sensu rpm
+- include: config.yml
+
+# Config json files
+- include: authenticate.yml
